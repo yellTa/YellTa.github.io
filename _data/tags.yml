@@ -7,5 +7,9 @@ tag_entries:
 
   - title: git
     url: ../tags/git.html
+    
+  - title: issue
+    url: ../tags/issue.html
+    
         
         

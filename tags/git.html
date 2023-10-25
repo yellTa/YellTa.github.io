@@ -10,12 +10,18 @@ text: git
    <h1>{{page.text}}</h1>
 </header>
 
-{% for post in site.posts %}
-   {% if post.tags contains page.text %}
-   <span class="home-date">
-          {{ post.date | date: site.theme_config.date_format }}»
+
+<ul class="horizontal-list">
+  {% for item in site.posts %}
+      {% if item.tags contains page.text %}
+    <li>
+        <span class="home-date">
+          {{ item.date | date: site.theme_config.date_format }}»
    </span>
-    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-    </br>
-    {% endif %}
-{% endfor %}
+      <a href="{{ item.url }}">
+        {{ item.title }}
+      </a>
+    </li>
+      {% endif %}
+  {% endfor %}
+</ul>

@@ -1,6 +1,6 @@
 ---
 layout: default
-text: Web
+text: issue
 ---
 
 <header>
@@ -10,9 +10,10 @@ text: Web
    <h1>{{page.text}}</h1>
 </header>
 
+
 <ul class="horizontal-list">
   {% for item in site.posts %}
-      {% if item.categories contains page.text %}
+      {% if item.tags contains page.text %}
     <li>
         <span class="home-date">
           {{ item.date | date: site.theme_config.date_format }}»
